@@ -1,0 +1,15 @@
+[Unit]
+Description=KN-26-1 Telegram timetable bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/kn26bot
+ExecStart=/home/ubuntu/kn26bot/.venv/bin/python /home/ubuntu/kn26bot/bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

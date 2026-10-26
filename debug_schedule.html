@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <meta name="csrf-param" content="_csrf-frontend">
+<meta name="csrf-token" content="TPOwhLrxeP3JSOxkvs8n0nK1fs9MA1aBZPjDzk3vzvE5idvU17IAvp9_qQDGhknrGeQykCtsbswTvYK2eLaMtA==">
+    <title>Розклад: Академ. групи </title>
+    <link href="/assets/e4dc1e62/css/select2.min.css?v=1580187682" rel="stylesheet">
+<link href="/assets/51648831/select2-bootstrap4.min.css?v=1611817346" rel="stylesheet">
+<link href="/assets/7021e2f0/daterangepicker.css?v=1590305601" rel="stylesheet">
+<link href="/assets/f0f111c1/css/bootstrap4-toggle.min.css?v=1699116900" rel="stylesheet">
+<link href="/assets/2b3e5bb4/lesson-type.css?v=1699116729" rel="stylesheet">
+<link href="/assets/38cb2736/style.css?v=1699116729" rel="stylesheet">
+<link href="/assets/b8f83/noty.css?v=1513197394" rel="stylesheet">
+<link href="/assets/ada08746/css/all.min.css?v=1734384716" rel="stylesheet">
+<link href="/assets/5e608486/sbadmin2-extra.css?v=1699116729" rel="stylesheet">
+<link href="/assets/a457630d/sb-admin-2.min.css?v=1699116729" rel="stylesheet">
+<link href="/assets/ed62869e/app.css?v=1757693781" rel="stylesheet">
+<link href="/assets/2b3e5bb4/spinner.css?v=1699116729" rel="stylesheet"></head>
+
+<body
+        id="page-top" >
+
+<div id="wrapper">
+    <ul id="accordionSidebar" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion "><a class="sidebar-brand d-flex align-items-center justify-content-center" href="/"><div class="sidebar-brand-icon"><img src="/icon.png" height="48px" alt=""></div></a><hr class="sidebar-divider my-0"><li class="nav-item"><a class="nav-link" href="/"><i class="fas fa-fw fa-home"></i><span>Головна</span></a></li><hr class="sidebar-divider"><div class="sidebar-heading">Сервіси</div><li class="nav-item active"><a class="nav-link" href="#" data-toggle="collapse" data-target="#w8-collapse1" aria-expanded="false" aria-controls="w8-collapse1"><i class="fas fa-fw fa-calendar"></i><span>Розклад</span></a><div id="w8-collapse1" class="menu collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<a class="collapse-item" href="/time-table/student">Студента</a>
+<a class="collapse-item active" href="/time-table/group">Академ. групи</a>
+<a class="collapse-item" href="/time-table/teacher">Викладача</a>
+<a class="collapse-item" href="/time-table/classroom">Аудиторії</a>
+<a class="collapse-item" href="/time-table/chair">Кафедри</a>
+</div>
+</div></li>
+<li class="nav-item"><a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#w8-collapse2" aria-expanded="false" aria-controls="w8-collapse2"><i class="fas fa-fw fa-briefcase"></i><span>Робочий план</span></a><div id="w8-collapse2" class="menu collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<a class="collapse-item" href="/workplan/speciality">Спеціальності</a>
+</div>
+</div></li>
+<li class="nav-item"><a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#w8-collapse3" aria-expanded="false" aria-controls="w8-collapse3"><i class="fas fa-fw fa-globe"></i><span>Інше</span></a><div id="w8-collapse3" class="menu collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<a class="collapse-item" href="/other/phones">Телефонний довідник</a>
+</div>
+</div></li><hr class="sidebar-divider"><li class="nav-item"><a class="nav-link" href="/site/cookies-policy" >
+        <i class="fas fa-fw fa-cookie"></i><span>Політика що до файлів cookie</span>
+        </a></li><hr class="sidebar-divider"><div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div></ul>
+    <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+        
+<nav class="navbar navbar-expand bg-white topbar mb-3 static-top shadow" role="navigation">
+
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button>
+
+    <div class="header text-center ml-md-auto h2 d-none d-md-block">
+        КрНУ    </div>
+
+    <ul class="navbar-nav ml-auto">
+                <li class="topbar-divider d-none d-sm-block"></li>
+                <li class="nav-item dropdown no-arrow">
+            <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Українська <span class="caret"></span></a><div class="dropdown-menu"><a class="dropdown-item" href="/language?app_language=en">English</a><a class="active dropdown-item" href="/language?app_language=uk">Українська</a></div>        </li>
+        <li class="topbar-divider d-none d-sm-block"></li><li class="nav-item mx-1"><a class="nav-link" href="/profile"><i class="fa-fw mr-1 fas fa-paper-plane" title="Реєстрація у чат-боті Telegram"></i></a></li>        <li class="topbar-divider d-none d-sm-block"></li>
+                    <li class="nav-item dropdown no-arrow">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                    Авторизація <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="/login"><i class="mr-2 fas fa-sign-in-alt"></i>Увійти</a>                </div>
+            </li>
+            </ul>
+</nav>
+
+        <div class="container-fluid">
+            <h1 class="h3 mb-1 text-gray-800" style="display:none">Розклад: Академ. групи </h1><nav aria-label="breadcrumb"><ol id="w9" class="breadcrumb"><li class="breadcrumb-item"><a href="/">Головна</a></li>
+<li class="breadcrumb-item active" aria-current="page">Розклад</li>
+<li class="breadcrumb-item active" aria-current="page">Академ. групи</li>
+</ol></nav>
+<div id="w2"><div id="w3" class="card shadow mb-2"><div class="card-body"><form id="filter-form" class="filter-form" action="/time-table/group?type=0" method="POST">
+<input type="hidden" name="_csrf-frontend" value="TPOwhLrxeP3JSOxkvs8n0nK1fs9MA1aBZPjDzk3vzvE5idvU17IAvp9_qQDGhknrGeQykCtsbswTvYK2eLaMtA=="><div class="filter-form-fields-content row"><div class="form-group col-md-3"><label>Факультет</label><select id="timetableform-facultyid" class="form-control select2-field" name="TimeTableForm[facultyId]">
+<option value="">--Факультет--</option>
+<option value="13">Аспірантура</option>
+<option value="14" selected>Навчально-науковий інститут електричної інженерії та інформаційних технологій</option>
+<option value="15">Навчально-науковий інститут механічної інженерії, транспорту та природничих наук</option>
+<option value="4">Факультет економіки і управління</option>
+<option value="6">Факультет права, гуманітарних і соціальних наук</option>
+<option value="7">Навчальний відділ</option>
+</select></div><div class="form-group col-md-1"><label>Курс</label><select id="timetableform-course" class="form-control select2-field" name="TimeTableForm[course]">
+<option value="">--Курс--</option>
+<option value="1" selected>1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select></div><div class="form-group col-md-2"><label>Група</label><select id="timetableform-groupid" class="form-control select2-field" name="TimeTableForm[groupId]">
+<option value="">--Група--</option>
+<option value="3508">АКІТ-26-1</option>
+<option value="3507">АКІТ-26-1м</option>
+<option value="3576">АКІТ-26-2</option>
+<option value="3515">Е-26-1</option>
+<option value="3567">Е-26-4</option>
+<option value="3510">ЕЛ-26-1</option>
+<option value="3509">ЕЛ-26-1м</option>
+<option value="3512">ЕС-26-1м</option>
+<option value="3513">ЕС-26-2м</option>
+<option value="3514">ЕТ-26-2м</option>
+<option value="3518">КІ-26-1</option>
+<option value="3520" selected>КН-26-1</option>
+<option value="3519">КН-26-1м</option>
+<option value="3574">КН-26-2</option>
+<option value="3521">ОПН-26-1м</option>
+<option value="3522">СОІ-26-1</option>
+<option value="3565">АКІТ-26-1з</option>
+<option value="3572">АКІТ-26-1зм</option>
+<option value="3566">Е-26-3з</option>
+<option value="3571">ЕЛ-26-1з</option>
+<option value="3563">ЕС-26-2зм</option>
+</select></div></div><div class="filter-form-extra-fields-content row"><div class="form-group col-md-3"><label>Діапазон дат</label><input type="text" id="timetableform-datestart" class="form-control submit" name="date-picker" value="">
+<input type="hidden" id="timetableform-datestart" class="form-control submit" name="TimeTableForm[dateStart]" value="05.10.2026">
+<input type="hidden" id="timetableform-datestart" class="form-control submit" name="TimeTableForm[dateEnd]" value="16.11.2026">
+</div><div class="form-group col-lg-2 col-sm-3"><label for="timetableform-indicationdays">Індикація змін (днів)</label><input type="number" id="timetableform-indicationdays" class="form-control submit" name="TimeTableForm[indicationDays]" value="5" style="background:#36b9cc"></div><div class="form-group col-lg-3 col-sm-4 align-self-end"><input type="checkbox" id="w0" name="time-table-type" value="1" checked></div></div></form></div></div></div><div id="w6" class="card shadow mb-2"><div class="card-body"><a id="w4" class="btn btn-primary mb-2" href="/time-table/print?serviceId=group" target="_blank"><i class="fas fa-print"></i> </a><div id="time-tablew5"><div class="table-container"><table class="table lesson-color-block" id="timeTable"><tr><th class="headday">Пн</th><th class="headdate"><div>05.10.2026</div></th><th class="headdate"><div>12.10.2026</div></th><th class="headdate"><div>19.10.2026</div></th><th class="headdate"><div>26.10.2026</div></th><th class="headdate"><div>02.11.2026</div></th><th class="headdate"><div>09.11.2026</div></th><th class="headdate"><div>16.11.2026</div></th></tr><tr>                    <th class="headcol">
+                        <span class="lesson">2 пара</span>
+                        <span class="start">09:00</span>
+                        <span class="end">10:20</span>
+                    </th><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="05.10.2026 2 пара" data-content="Англійська мова за професійним спрямуванням[Пз]<br>ауд. 7509<br>КН-26-1<br>Поддубей Олена Вікторівна<br>Додано:  27.08.2026">
+            Ампс<strong>[Пз]</strong><br>
+            <strong>ауд. 7509</strong><br>
+            <i>Поддубей О.В.</i>
+        </div>
+    </div></div></td><td><div class="cell">&nbsp</div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="19.10.2026 2 пара" data-content="Англійська мова за професійним спрямуванням[Пз]<br>ауд. 7509<br>КН-26-1<br>Поддубей Олена Вікторівна<br>Додано:  27.08.2026">
+            Ампс<strong>[Пз]</strong><br>
+            <strong>ауд. 7509</strong><br>
+            <i>Поддубей О.В.</i>
+        </div>
+    </div></div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td></tr><tr>                    <th class="headcol">
+                        <span class="lesson">3 пара</span>
+                        <span class="start">10:30</span>
+                        <span class="end">11:50</span>
+                    </th><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="05.10.2026 3 пара" data-content="Вища математика[Пз]<br>ауд. 7308<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  08.09.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7308</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="12.10.2026 3 пара" data-content="Вища математика[Пз]<br>ауд. 7308<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  08.09.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7308</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="19.10.2026 3 пара" data-content="Вища математика[Пз]<br>ауд. 7308<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  08.09.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7308</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="26.10.2026 3 пара" data-content="Вища математика[Пз]<br>ауд. 7308<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  08.09.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7308</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="02.11.2026 3 пара" data-content="Вища математика[Пз]<br>ауд. 7308<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  08.09.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7308</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="09.11.2026 3 пара" data-content="Вища математика[Пз]<br>ауд. 7308<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  08.09.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7308</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="16.11.2026 3 пара" data-content="Вища математика[Пз]<br>ауд. 7308<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  08.09.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7308</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td></tr><tr>                    <th class="headcol">
+                        <span class="lesson">4 пара</span>
+                        <span class="start">12:05</span>
+                        <span class="end">13:25</span>
+                    </th><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="05.10.2026 4 пара" data-content="Основи інформаційних технологій[Лб]<br>ауд. 7404<br>КН-26-1<br>Найда Віталій Володимирович<br>Додано:  26.08.2026">
+            ОІТ<strong>[Лб]</strong><br>
+            <strong>ауд. 7404</strong><br>
+            <i>Найда В.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="12.10.2026 4 пара" data-content="Основи інформаційних технологій[Лб]<br>ауд. 7404<br>КН-26-1<br>Найда Віталій Володимирович<br>Додано:  26.08.2026">
+            ОІТ<strong>[Лб]</strong><br>
+            <strong>ауд. 7404</strong><br>
+            <i>Найда В.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="19.10.2026 4 пара" data-content="Основи інформаційних технологій[Лб]<br>ауд. 7404<br>КН-26-1<br>Найда Віталій Володимирович<br>Додано:  26.08.2026">
+            ОІТ<strong>[Лб]</strong><br>
+            <strong>ауд. 7404</strong><br>
+            <i>Найда В.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="26.10.2026 4 пара" data-content="Основи інформаційних технологій[Лб]<br>ауд. 7404<br>КН-26-1<br>Найда Віталій Володимирович<br>Додано:  26.08.2026">
+            ОІТ<strong>[Лб]</strong><br>
+            <strong>ауд. 7404</strong><br>
+            <i>Найда В.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="02.11.2026 4 пара" data-content="Основи інформаційних технологій[Лб]<br>ауд. 7404<br>КН-26-1<br>Найда Віталій Володимирович<br>Додано:  26.08.2026">
+            ОІТ<strong>[Лб]</strong><br>
+            <strong>ауд. 7404</strong><br>
+            <i>Найда В.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="09.11.2026 4 пара" data-content="Основи інформаційних технологій[Лб]<br>ауд. 7404<br>КН-26-1<br>Найда Віталій Володимирович<br>Додано:  26.08.2026">
+            ОІТ<strong>[Лб]</strong><br>
+            <strong>ауд. 7404</strong><br>
+            <i>Найда В.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="16.11.2026 4 пара" data-content="Основи інформаційних технологій[Лб]<br>ауд. 7404<br>КН-26-1<br>Найда Віталій Володимирович<br>Додано:  26.08.2026">
+            ОІТ<strong>[Лб]</strong><br>
+            <strong>ауд. 7404</strong><br>
+            <i>Найда В.В.</i>
+        </div>
+    </div></div></td></tr><tr>                    <th class="headcol">
+                        <span class="lesson">5 пара</span>
+                        <span class="start">13:35</span>
+                        <span class="end">14:55</span>
+                    </th><td><div class="cell">&nbsp</div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="12.10.2026 5 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="19.10.2026 5 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="26.10.2026 5 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="02.11.2026 5 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="09.11.2026 5 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="16.11.2026 5 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td></tr><tr>                    <th class="headcol">
+                        <span class="lesson">6 пара</span>
+                        <span class="start">15:05</span>
+                        <span class="end">16:25</span>
+                    </th><td><div class="cell">&nbsp</div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="12.10.2026 6 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell">&nbsp</div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="26.10.2026 6 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell">&nbsp</div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="09.11.2026 6 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell">&nbsp</div></td></tr><tr><th class="headday">Вт</th><th class="headdate"><div>06.10.2026</div></th><th class="headdate"><div>13.10.2026</div></th><th class="headdate"><div>20.10.2026</div></th><th class="headdate"><div>27.10.2026</div></th><th class="headdate"><div>03.11.2026</div></th><th class="headdate"><div>10.11.2026</div></th><th class="headdate"><div>17.11.2026</div></th></tr><tr>                    <th class="headcol">
+                        <span class="lesson">2 пара</span>
+                        <span class="start">09:00</span>
+                        <span class="end">10:20</span>
+                    </th><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="06.10.2026 2 пара" data-content="Дискретна математика[Лк]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="13.10.2026 2 пара" data-content="Основи інформаційних технологій[Лк]<br>ауд. 7519<br>КН-26-1<br>Сидоренко Валерій Миколайович<br>Додано:  27.08.2026">
+            ОІТ<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Сидоренко В.М.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="20.10.2026 2 пара" data-content="Дискретна математика[Лк]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="27.10.2026 2 пара" data-content="Основи інформаційних технологій[Лк]<br>ауд. 7519<br>КН-26-1<br>Сидоренко Валерій Миколайович<br>Додано:  27.08.2026">
+            ОІТ<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Сидоренко В.М.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="03.11.2026 2 пара" data-content="Дискретна математика[Лк]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="10.11.2026 2 пара" data-content="Основи інформаційних технологій[Лк]<br>ауд. 7519<br>КН-26-1<br>Сидоренко Валерій Миколайович<br>Додано:  27.08.2026">
+            ОІТ<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Сидоренко В.М.</i>
+        </div>
+    </div></div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr><tr>                    <th class="headcol">
+                        <span class="lesson">3 пара</span>
+                        <span class="start">10:30</span>
+                        <span class="end">11:50</span>
+                    </th><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="06.10.2026 3 пара" data-content="Алгоритмізація та програмування[Лк]<br>ауд. 7519<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="13.10.2026 3 пара" data-content="Алгоритмізація та програмування[Лк]<br>ауд. 7519<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="20.10.2026 3 пара" data-content="Алгоритмізація та програмування[Лк]<br>ауд. 7519<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="27.10.2026 3 пара" data-content="Алгоритмізація та програмування[Лк]<br>ауд. 7519<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="03.11.2026 3 пара" data-content="Алгоритмізація та програмування[Лк]<br>ауд. 7519<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="10.11.2026 3 пара" data-content="Алгоритмізація та програмування[Лк]<br>ауд. 7519<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лк]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr><tr><th class="headday">Ср</th><th class="headdate"><div>07.10.2026</div></th><th class="headdate"><div>14.10.2026</div></th><th class="headdate"><div>21.10.2026</div></th><th class="headdate"><div>28.10.2026</div></th><th class="headdate"><div>04.11.2026</div></th><th class="headdate"><div>11.11.2026</div></th><th class="headdate"><div>18.11.2026</div></th></tr><tr>                    <th class="headcol">
+                        <span class="lesson">2 пара</span>
+                        <span class="start">09:00</span>
+                        <span class="end">10:20</span>
+                    </th><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="07.10.2026 2 пара" data-content="Вища математика[Лк]<br>ауд. 1416<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  02.09.2026">
+            ВМ<strong>[Лк]</strong><br>
+            <strong>ауд. 1416</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="14.10.2026 2 пара" data-content="Вища математика[Лк]<br>ауд. 1416<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  02.09.2026">
+            ВМ<strong>[Лк]</strong><br>
+            <strong>ауд. 1416</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="21.10.2026 2 пара" data-content="Вища математика[Лк]<br>ауд. 1416<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  02.09.2026">
+            ВМ<strong>[Лк]</strong><br>
+            <strong>ауд. 1416</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell">&nbsp</div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="04.11.2026 2 пара" data-content="Вища математика[Лк]<br>ауд. 1416<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  21.09.2026">
+            ВМ<strong>[Лк]</strong><br>
+            <strong>ауд. 1416</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell">&nbsp</div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr><tr>                    <th class="headcol">
+                        <span class="lesson">3 пара</span>
+                        <span class="start">10:30</span>
+                        <span class="end">11:50</span>
+                    </th><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="07.10.2026 3 пара" data-content="Англійська мова за професійним спрямуванням[Пз]<br>ауд. 7509<br>КН-26-1<br>Поддубей Олена Вікторівна<br>Додано:  26.08.2026">
+            Ампс<strong>[Пз]</strong><br>
+            <strong>ауд. 7509</strong><br>
+            <i>Поддубей О.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="14.10.2026 3 пара" data-content="Англійська мова за професійним спрямуванням[Пз]<br>ауд. 7509<br>КН-26-1<br>Поддубей Олена Вікторівна<br>Додано:  26.08.2026">
+            Ампс<strong>[Пз]</strong><br>
+            <strong>ауд. 7509</strong><br>
+            <i>Поддубей О.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="21.10.2026 3 пара" data-content="Англійська мова за професійним спрямуванням[Пз]<br>ауд. 7509<br>КН-26-1<br>Поддубей Олена Вікторівна<br>Додано:  26.08.2026">
+            Ампс<strong>[Пз]</strong><br>
+            <strong>ауд. 7509</strong><br>
+            <i>Поддубей О.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="28.10.2026 3 пара" data-content="Англійська мова за професійним спрямуванням[Пз]<br>ауд. 7509<br>КН-26-1<br>Поддубей Олена Вікторівна<br>Додано:  26.08.2026">
+            Ампс<strong>[Пз]</strong><br>
+            <strong>ауд. 7509</strong><br>
+            <i>Поддубей О.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="04.11.2026 3 пара" data-content="Англійська мова за професійним спрямуванням[Пз]<br>ауд. 7509<br>КН-26-1<br>Поддубей Олена Вікторівна<br>Додано:  26.08.2026">
+            Ампс<strong>[Пз]</strong><br>
+            <strong>ауд. 7509</strong><br>
+            <i>Поддубей О.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="11.11.2026 3 пара" data-content="Англійська мова за професійним спрямуванням[Пз]<br>ауд. 7509<br>КН-26-1<br>Поддубей Олена Вікторівна<br>Додано:  26.08.2026">
+            Ампс<strong>[Пз]</strong><br>
+            <strong>ауд. 7509</strong><br>
+            <i>Поддубей О.В.</i>
+        </div>
+    </div></div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr><tr>                    <th class="headcol">
+                        <span class="lesson">4 пара</span>
+                        <span class="start">12:05</span>
+                        <span class="end">13:25</span>
+                    </th><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="07.10.2026 4 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="14.10.2026 4 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="21.10.2026 4 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="28.10.2026 4 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="04.11.2026 4 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="11.11.2026 4 пара" data-content="Дискретна математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  27.08.2026">
+            Дискр.мат<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr><tr><th class="headday">Чт</th><th class="headdate"><div>08.10.2026</div></th><th class="headdate"><div>15.10.2026</div></th><th class="headdate"><div>22.10.2026</div></th><th class="headdate"><div>29.10.2026</div></th><th class="headdate"><div>05.11.2026</div></th><th class="headdate"><div>12.11.2026</div></th><th class="headdate"><div>19.11.2026</div></th></tr><tr>                    <th class="headcol">
+                        <span class="lesson">3 пара</span>
+                        <span class="start">10:30</span>
+                        <span class="end">11:50</span>
+                    </th><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="08.10.2026 3 пара" data-content="Основи інформаційних технологій[Пз]<br>ауд. 7301<br>КН-26-1<br>Рилова Наталія Вікторовна<br>Додано:  26.08.2026">
+            ОІТ<strong>[Пз]</strong><br>
+            <strong>ауд. 7301</strong><br>
+            <i>Рилова Н.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="15.10.2026 3 пара" data-content="Основи інформаційних технологій[Пз]<br>ауд. 7301<br>КН-26-1<br>Рилова Наталія Вікторовна<br>Додано:  26.08.2026">
+            ОІТ<strong>[Пз]</strong><br>
+            <strong>ауд. 7301</strong><br>
+            <i>Рилова Н.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="22.10.2026 3 пара" data-content="Основи інформаційних технологій[Пз]<br>ауд. 7301<br>КН-26-1<br>Рилова Наталія Вікторовна<br>Додано:  26.08.2026">
+            ОІТ<strong>[Пз]</strong><br>
+            <strong>ауд. 7301</strong><br>
+            <i>Рилова Н.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="29.10.2026 3 пара" data-content="Основи інформаційних технологій[Пз]<br>ауд. 7301<br>КН-26-1<br>Рилова Наталія Вікторовна<br>Додано:  26.08.2026">
+            ОІТ<strong>[Пз]</strong><br>
+            <strong>ауд. 7301</strong><br>
+            <i>Рилова Н.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="05.11.2026 3 пара" data-content="Основи інформаційних технологій[Пз]<br>ауд. 7301<br>КН-26-1<br>Рилова Наталія Вікторовна<br>Додано:  26.08.2026">
+            ОІТ<strong>[Пз]</strong><br>
+            <strong>ауд. 7301</strong><br>
+            <i>Рилова Н.В.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="12.11.2026 3 пара" data-content="Основи інформаційних технологій[Пз]<br>ауд. 7301<br>КН-26-1<br>Рилова Наталія Вікторовна<br>Додано:  26.08.2026">
+            ОІТ<strong>[Пз]</strong><br>
+            <strong>ауд. 7301</strong><br>
+            <i>Рилова Н.В.</i>
+        </div>
+    </div></div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr><tr>                    <th class="headcol">
+                        <span class="lesson">4 пара</span>
+                        <span class="start">12:05</span>
+                        <span class="end">13:25</span>
+                    </th><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="08.10.2026 4 пара" data-content="Алгоритмізація та програмування[Лб]<br>ауд. 7419<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лб]</strong><br>
+            <strong>ауд. 7419</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="15.10.2026 4 пара" data-content="Алгоритмізація та програмування[Лб]<br>ауд. 7419<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лб]</strong><br>
+            <strong>ауд. 7419</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="22.10.2026 4 пара" data-content="Алгоритмізація та програмування[Лб]<br>ауд. 7419<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лб]</strong><br>
+            <strong>ауд. 7419</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="29.10.2026 4 пара" data-content="Алгоритмізація та програмування[Лб]<br>ауд. 7419<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лб]</strong><br>
+            <strong>ауд. 7419</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="05.11.2026 4 пара" data-content="Алгоритмізація та програмування[Лб]<br>ауд. 7419<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лб]</strong><br>
+            <strong>ауд. 7419</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-4 ">
+         
+        <div data-toggle="popover" title="12.11.2026 4 пара" data-content="Алгоритмізація та програмування[Лб]<br>ауд. 7419<br>КН-26-1<br>Бельська Вікторія Юріївна<br>Додано:  26.08.2026">
+            АТП<strong>[Лб]</strong><br>
+            <strong>ауд. 7419</strong><br>
+            <i>Бельська В.Ю.</i>
+        </div>
+    </div></div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr><tr>                    <th class="headcol">
+                        <span class="lesson">5 пара</span>
+                        <span class="start">13:35</span>
+                        <span class="end">14:55</span>
+                    </th><td><div class="cell">&nbsp</div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="15.10.2026 5 пара" data-content="Вища математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  26.08.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="22.10.2026 5 пара" data-content="Вища математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  26.08.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="29.10.2026 5 пара" data-content="Вища математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  26.08.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="05.11.2026 5 пара" data-content="Вища математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  26.08.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="12.11.2026 5 пара" data-content="Вища математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  26.08.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr><tr><th class="headday">Пт</th><th class="headdate"><div>09.10.2026</div></th><th class="headdate"><div>16.10.2026</div></th><th class="headdate"><div>23.10.2026</div></th><th class="headdate"><div>30.10.2026</div></th><th class="headdate"><div>06.11.2026</div></th><th class="headdate"><div>13.11.2026</div></th><th class="headdate"><div>20.11.2026</div></th></tr><tr>                    <th class="headcol">
+                        <span class="lesson">4 пара</span>
+                        <span class="start">12:05</span>
+                        <span class="end">13:25</span>
+                    </th><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell"><div class="lesson-2 ">
+         
+        <div data-toggle="popover" title="06.11.2026 4 пара" data-content="Вища математика[Пз]<br>ауд. 7519<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  02.10.2026">
+            ВМ<strong>[Пз]</strong><br>
+            <strong>ауд. 7519</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell">&nbsp</div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr><tr>                    <th class="headcol">
+                        <span class="lesson">5 пара</span>
+                        <span class="start">13:35</span>
+                        <span class="end">14:55</span>
+                    </th><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell"><div class="lesson-1 ">
+         
+        <div data-toggle="popover" title="06.11.2026 5 пара" data-content="Дискретна математика[Лк]<br>ауд. 2502<br>КН-26-1<br>Оксанич Ірина Григорівна<br>Додано:  21.09.2026">
+            Дискр.мат<strong>[Лк]</strong><br>
+            <strong>ауд. 2502</strong><br>
+            <i>Оксанич І.Г.</i>
+        </div>
+    </div></div></td><td><div class="cell">&nbsp</div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr><tr><th class="headday">Сб</th><th class="headdate"><div>10.10.2026</div></th><th class="headdate"><div>17.10.2026</div></th><th class="headdate"><div>24.10.2026</div></th><th class="headdate"><div>31.10.2026</div></th><th class="headdate"><div>07.11.2026</div></th><th class="headdate"><div>14.11.2026</div></th><th class="headdate"><div>21.11.2026</div></th></tr><tr>                    <th class="headcol">
+                        <span class="lesson">1 пара</span>
+                        <span class="start">07:30</span>
+                        <span class="end">08:50</span>
+                    </th><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr><tr><th class="headday">Нд</th><th class="headdate"><div>11.10.2026</div></th><th class="headdate"><div>18.10.2026</div></th><th class="headdate"><div>25.10.2026</div></th><th class="headdate"><div>01.11.2026</div></th><th class="headdate"><div>08.11.2026</div></th><th class="headdate"><div>15.11.2026</div></th><th class="headdate"><div>22.11.2026</div></th></tr><tr>                    <th class="headcol">
+                        <span class="lesson">1 пара</span>
+                        <span class="start">07:30</span>
+                        <span class="end">08:50</span>
+                    </th><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td><div class="cell">&nbsp</div></td><td class="closed" data-toggle="tooltip" data-placement="top" title="Виберіть необхідний діапазон дат">&nbsp</td></tr></table></div></div></div></div>
+<div id="modal-view" class="fade modal" role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="modal-view-label">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 id="modal-view-label" class="modal-title">Оголошення</h5>
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+</div>
+<div class="modal-body">
+
+</div>
+
+</div>
+</div>
+</div>
+<div id="modal-information" class="fade modal" role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="modal-information-label">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 id="modal-information-label" class="modal-title">Інформація для студентів</h5>
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+</div>
+<div class="modal-body">
+
+</div>
+
+</div>
+</div>
+</div>        </div>
+    </div>
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright © 2008-2026 <a target="_blank" href="http://mkr.org.ua"> ООО "МКР" (http://mkr.org.ua)</a>. <b>Версія</b> 2.6.6</span>
+            </div>
+        </div>
+    </footer>
+</div>
+
+    <div id="spinner" class="mkr-spinner card shadow mb-2" style="display:none"><div class="card-body"><div class="spinner-border" role="status"><span class="sr-only">Завантаження...</span></div></div></div></div>
+
+<script src="/assets/5b5c78c9/jquery.min.js?v=1693229950"></script>
+<script src="/assets/e4dc1e62/js/select2.full.min.js?v=1580187682"></script>
+<script src="/assets/b8820b7e/moment.min.js?v=1703673318"></script>
+<script src="/assets/5a635f4b/uk.js?v=1703673318"></script>
+<script src="/assets/7021e2f0/daterangepicker.js?v=1590305601"></script>
+<script src="/assets/f0f111c1/js/bootstrap4-toggle.min.js?v=1699116900"></script>
+<script src="/assets/ef253ba9/js/bootstrap.bundle.min.js?v=1699116900"></script>
+<script src="/assets/b8f83/noty.min.js?v=1513197394"></script>
+<script src="/assets/60c608c7/yii.js?v=1739476948"></script>
+<script src="/assets/a457630d/sb-admin-2.min.js?v=1757693781"></script>
+<script>                $(document).on('change', 
+                '#filter-form .filter-form-fields-content select:not(:last,.submit), #filter-form .filter-form-fields-content div:not(.not-submit) select:not(:last,.submit)', function(){
+            
+                var form  = $(this).closest('form');
+                var url = form.attr('action');
+                
+                $('#filter-form .filter-form-fields-content select:last, #filter-form .filter-form-fields-content div:not(.not-submit) select:last').val('');
+        
+                $.ajax({
+                    type: 'POST',
+                    url:  url,
+                    data: form.serialize(),
+                    success:function(data){
+                        $(form).html($('#filter-form', data).html());
+                        $('#filter-form-extra').html('');
+                        
+                        initSelect2({'theme' : 'bootstrap4'})
+                    },
+                    error: function(jqXHR, textStatus, errorThrown){
+                        if (jqXHR.status == 500) {
+                            alert( 'Internal error: ' + jqXHR.responseText)
+                        } else {
+                            if (jqXHR.status == 403) {
+                                alert('Access error: ' + jqXHR.responseText)
+                            } else {
+                                alert('Unexpected error.')
+                            }
+                        }
+                    }
+                });
+            });
+        
+            $(document).on('change', '#filter-form .filter-form-fields-content select:last, #filter-form .filter-form-fields-content div:not(.not-submit) select:last, #filter-form .submit', function(){
+                $(this).closest('form').submit();
+            });
+            
+            function initSelect2(options){
+                $('.select2-field').each(function (){
+                    let optionsTmp = options;
+                    optionsTmp['placeholder'] = $(this).attr('placeholder');
+                    $(this).select2(optionsTmp);
+                })
+            }
+            $(document).on('click','#w4',
+                function(e){
+                    e.preventDefault();
+                    let form = $("#filter-form");
+                    let action=form.attr("action");
+                    form.attr("action", $(this).attr('href'));
+                    form.submit();
+                    form.attr("action", action);
+                }
+            );
+            $(function () {
+                $('[data-toggle="popover"]').popover({
+                    html:true
+                })
+                
+                $('body').on('click', function (e) {
+                    $('[data-toggle="popover"]').each(function () {
+                        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                            $(this).popover('hide');
+                        }
+                    });
+                });
+            });            var modalViewAds = $('#modal-view');
+            $('.btn-show-ads').click(function(e){
+                e.preventDefault();
+                let button = $(this);
+                $.ajax({
+                    url: '/time-table/show-ads?r1='+button.data('r1')+'&r2='+button.data('r2'),
+                    dataType: 'json',
+                    method:'GET',
+                    success: function(data) {
+                        $('#modal-view .modal-body').html(data.html)
+                        modalViewAds.modal('show');                        
+                    },
+                    error: function(jqXHR, textStatus, errorThrown){
+                        new Noty({
+                            type: 'error',
+                            layout: 'topRight',
+                            timeout: 5000,
+                            text: jqXHR.responseText
+                        }).show();
+                    }
+                });
+            });            var modalView = $('#modal-information');
+            $('.btn-show-information ').click(function(e){
+                e.preventDefault();
+                let button = $(this);
+                $.ajax({
+                    url: '/time-table/show-information?p1='+button.data('p1'),
+                    dataType: 'json',
+                    method:'GET',
+                    success: function(data) {
+                        
+               //         console.log(data);
+                        
+                        $('#modal-information .modal-body').html(data.html)
+                        modalView.modal('show');
+                    },
+                    error: function(jqXHR, textStatus, errorThrown){
+                        new Noty({
+                            type: 'error',
+                            layout: 'topRight',
+                            timeout: 5000,
+                            text: jqXHR.responseText
+                        }).show();
+                    }
+                });
+            });
+jQuery(document).on('pjax:start', function() { $('#spinner').show(); });
+jQuery(document).on('pjax:end',   function() { $('#spinner').hide();  });                    
+jQuery(document).on('ajaxStart',    function() { $('#spinner').show(); });
+jQuery(document).on('ajaxComplete', function() { $('#spinner').hide();  });                    </script>
+<script>jQuery(function ($) {
+;jQuery('#timetableform-facultyid').select2({"placeholder":"--Факультет--","theme":"bootstrap4"});
+;jQuery('#timetableform-course').select2({"placeholder":"--Курс--","theme":"bootstrap4"});
+;jQuery('#timetableform-groupid').select2({"placeholder":"--Група--","theme":"bootstrap4"});
+$('#timetableform-datestart').daterangepicker({"timePicker":false,"timePicker12Hour":false,"separator":" - ","autoUpdateInput":false,"singleDatePicker":false,"ranges":{"Семестр":[moment("2026-09-01 00:00:00"), moment("2026-11-29 00:00:00")],"Поточний місяць":[moment().startOf("month"), moment().endOf("month")],"Наступний місяць":[moment().add(1,"months").startOf("month"), moment().add(1,"months").endOf("month")],"Поточний тиждень":[moment().startOf("week"), moment().endOf("week")],"Наступний тиждень":[moment().add(1,"weeks").startOf("week"), moment().add(1,"weeks").endOf("week")]},"locale":{"format":"DD.MM.YYYY","applyLabel":"Обрати","cancelLabel":"Скасувати","fromLabel":"З","toLabel":"До","weekLabel":"Т","customRangeLabel":"Свій період"},"startDate":"05.10.2026","endDate":"16.11.2026"});
+$('#timetableform-datestart').val('05.10.2026 - 16.11.2026');
+$('#timetableform-datestart').on('apply.daterangepicker', function (event, picker) {
+                        var form = $(picker.element[0]).closest('form');
+                        var start = picker.startDate.format('dd.MM.yyyy'.toUpperCase());
+                        var end = picker.endDate.format('dd.MM.yyyy'.toUpperCase());
+                        
+                        $('#timetableform-datestart').val(start + ' - ' + end);
+                        form.find("input[name*='dateStart']").val(start);
+                        form.find("input[name*='dateEnd']").val(end);
+                                            form.submit();
+                    }).on('cancel.daterangepicker', function (event, picker) {
+                        var form = $(picker.element[0]).closest('form');
+                        $('#timetableform-datestart').val('');
+                        form.find("input[name *= 'dateStart']").val('');
+                        form.find("input[name *= 'dateEnd']").val('');
+                    })
+jQuery('#w0').bootstrapToggle({"on":"Табличний вигляд","off":"Календарний вид","size":"sm","onstyle":"warning","offstyle":"info","width":200,"height":38,"class":"submit"});
+jQuery('#w0').on('change',                 function () {
+                    var form = $(this).closest('form');
+                    var url = '';
+                    if($(this).prop('checked'))
+                        url = '/time-table/group?type=0';
+                    else 
+                        url = '/time-table/group?type=1';
+        
+                    form.attr('action', url);
+                    form.submit();
+                });
+jQuery('#modal-view').modal({"show":false});
+jQuery('#modal-information').modal({"show":false});
+moment.locale('uk')
+/*! js-cookie v3.0.5 | MIT */
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e="undefined"!=typeof globalThis?globalThis:e||self,function(){var n=e.Cookies,o=e.Cookies=t();o.noConflict=function(){return e.Cookies=n,o}}())}(this,(function(){"use strict";function e(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var o in n)e[o]=n[o]}return e}var t=function t(n,o){function r(t,r,i){if("undefined"!=typeof document){"number"==typeof(i=e({},o,i)).expires&&(i.expires=new Date(Date.now()+864e5*i.expires)),i.expires&&(i.expires=i.expires.toUTCString()),t=encodeURIComponent(t).replace(/%(2[346B]|5E|60|7C)/g,decodeURIComponent).replace(/[()]/g,escape);var c="";for(var u in i)i[u]&&(c+="; "+u,!0!==i[u]&&(c+="="+i[u].split(";")[0]));return document.cookie=t+"="+n.write(r,t)+c}}return Object.create({set:r,get:function(e){if("undefined"!=typeof document&&(!arguments.length||e)){for(var t=document.cookie?document.cookie.split("; "):[],o={},r=0;r<t.length;r++){var i=t[r].split("="),c=i.slice(1).join("=");try{var u=decodeURIComponent(i[0]);if(o[u]=n.read(c,u),e===u)break}catch(e){}}return e?o[e]:o}},remove:function(t,n){r(t,"",e({},n,{expires:-1}))},withAttributes:function(n){return t(this.converter,e({},this.attributes,n))},withConverter:function(n){return t(e({},this.converter,n),this.attributes)}},{attributes:{value:Object.freeze(o)},converter:{value:Object.freeze(n)}})}({read:function(e){return'"'===e[0]&&(e=e.slice(1,-1)),e.replace(/(%[\dA-F]{2})+/gi,decodeURIComponent)},write:function(e){return encodeURIComponent(e).replace(/%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,decodeURIComponent)}},{path:"/"});return t}));
+   
+    const COOKIE_NAME = 'privacy_police';
+    const cookieAlert = document.querySelector('.cookie-alert--js');
+    const cookieBtn = document.querySelector('.cookie-alert__btn--js');
+    if(!Cookies.get(COOKIE_NAME)){
+        setTimeout(() => cookieAlert.classList.add('is-show'), 1000);
+        cookieBtn.addEventListener('click', setCookie);
+    }
+    function setCookie(){
+        cookieAlert.classList.remove('is-show');
+        setTimeout(() => cookieAlert.remove(), 1000);
+        Cookies.set(COOKIE_NAME, true, { expires: 90 });
+    }
+});</script><div class="cookie-alert cookie-alert--js"><div class="cookie-alert__container"><div class="cookie-alert__left"><div class="cookie-text">текст уведомления о Cookies</div><a class="cookie-link" href="/site/cookies-policy">Політика що до файлів cookie</a></div><button class="btn cookie-alert-button cookie-alert__btn--js">Прийняти</button></div></div>
+
+<script>
+    // Глобальный объект с переводами
+    window.appTranslations = {"invalid_characters":"\u0411\u0443\u0434\u044c \u043b\u0430\u0441\u043a\u0430, \u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u043e\u0432\u0443\u0439\u0442\u0435 \u043b\u0438\u0448\u0435 \u0434\u043e\u043f\u0443\u0441\u0442\u0438\u043c\u0456 \u0441\u0438\u043c\u0432\u043e\u043b\u0438: \u043b\u0456\u0442\u0435\u0440\u0438, \u0446\u0438\u0444\u0440\u0438 \u0442\u0430 \u0440\u043e\u0437\u0434\u0456\u043b\u043e\u0432\u0456 \u0437\u043d\u0430\u043a\u0438"};
+</script>
+
+
+</body>
+</html>
