@@ -230,7 +230,7 @@ def tg(method, payload, timeout=20):
 
 ZOOM_LINKS = {
     'math': 'https://us02web.zoom.us/j/3077647729?pwd=WWQ1ekg3MTYyeUJpejJFaVNoY1dQUT09',
-    'oit_naida': 'https://us05web.zoom.us/j/2531286862?pwd=NnFjTEpNVGgrVEJPTHdtSG1NVmR6Zz09',
+    'oit_naida': 'https://us05web.zoom.us/j/2531286862?pwd=kEbsnbSXQ4RScPq9MqhaNG3Cl2BRrS.1',
     'oit_rylova': 'https://us02web.zoom.us/j/4706770837?pwd=OXFrSUExOVdSOUZ1Tkp5NXNNWXVlUT09',
     'oit_sydorenko': 'https://us02web.zoom.us/j/86033350284?pwd=JQrNrbPR2SvmrUzSqXoa0gR1De97pq.1',
     'amps': 'https://us02web.zoom.us/j/87437416609?pwd=TmFYaHArdTk4dWcrSUpzWmJtSG1tdz09',
